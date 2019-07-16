@@ -6,6 +6,10 @@ body { font-family: Helvetica, Arial, sans-serif; }
   max-width: 1200px;
 }
 
+.mainHeader {
+  display: flex;
+}
+
 .box{
   background-color: #8ea89e;
   color: #fff;
@@ -15,10 +19,40 @@ body { font-family: Helvetica, Arial, sans-serif; }
   margin: 10px;
 }
 
+.nav {
+  width: 10%;
+}
+
 .logo {
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 50%;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  order: -1;
+}
+
+#burgerCon {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 85px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  /*This should be off be default and toggled on by JavaScript*/
+  display: none;
+}
+
+.show-mobile-nav { display: block !important; }
+
+#burgerCon li {
+  padding: 20px;
+  border-top: thin solid #666;
+  text-align: center;
+}
+
+#burgerCon a {
+  text-decoration: none;
+  color: #8ea89e;
 }
 
 @media screen and (min-width: 600px) {
